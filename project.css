@@ -1,0 +1,307 @@
+*{
+    scroll-behavior: smooth;
+}
+
+/* Modern Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Modern Navigation */
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav > a {
+    text-decoration: none;
+    color: #667eea;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+
+}
+
+nav > a:hover {
+    background: #667eea;
+    color: white;
+
+}
+
+/* Hero Section */
+main > h1 {
+    text-align: center;
+    font-size: 56px;
+    font-weight: 800;
+    color: white;
+    margin: 60px auto 40px;
+    padding: 30px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Content Banner */
+.content2 {
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    margin: 40px auto;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    font-size: 22px;
+    line-height: 1.6;
+    color: #555;
+}
+
+h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Card Container */
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 50px auto;
+    background: transparent;
+    padding: 20px;
+}
+
+.one, .two, .three, .four, .five {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.video{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.process {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #667eea;
+    position: relative;
+    overflow: hidden;
+}
+
+.process::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+
+
+.process:hover {
+    box-shadow: 0 15px 45px rgba(102, 126, 234, 0.4);
+}
+
+.process:hover::before {
+    opacity: 1;
+}
+
+/* Benefits Cards - Clean Style */
+.benefits {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    color: white;
+    transition: all 0.4s ease;
+}
+
+h3 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: inherit;
+}
+
+.process h3 {
+    color: #667eea;
+}
+
+
+.heading{
+    color: wheat;
+}
+
+/* Modern Footer */
+footer {
+    background: white;
+    margin-top: 100px;
+    padding: 50px 30px;
+    text-align: center;
+    border-top: 5px solid #667eea;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+footer > div > a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #667eea;
+    border-radius: 25px;
+`
+}
+
+
+#q {
+    border: none;
+    background: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    main > h1 {
+        font-size: 44px;
+    }
+    
+    h2 {
+        font-size: 36px;
+    }
+    
+    .content2 {
+        font-size: 20px;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    nav > a {
+        font-size: 16px;
+    }
+    
+    main > h1 {
+        font-size: 36px;
+        padding: 20px;
+        margin: 40px auto 30px;
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+    
+    .content2 {
+        width: 95%;
+        padding: 25px;
+        font-size: 18px;
+    }
+    
+    .one, .two, .three, .four, .five {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .process, .benefits {
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 15px;
+    }
+    
+    nav > a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    
+    main > h1 {
+        font-size: 28px;
+        padding: 15px;
+        margin: 30px auto 20px;
+        letter-spacing: 1px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    h3 {
+        font-size: 22px;
+    }
+    
+    .content2 {
+        width: 95%;
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 15px;
+    }
+    
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .process, .benefits {
+        padding: 20px;
+    }
+    
+    footer {
+        padding: 30px 20px;
+        margin-top: 60px;
+    }
+    
+    footer > div {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
